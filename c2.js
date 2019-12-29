@@ -15,11 +15,10 @@ console.log(t2a);
 t3a = (t3g1+t3g2+t3g3)/3;
 console.log(t3a);
 
-//if (t1a === t2a || t1a ==== t3a || t2a === t3a) {
- //   console 
- t1a = 120;
- t2a = 120;
- t3a = 120;
+// My idea here is that functionally it will be good to know the result if it is draw, so i add a little smth on top.
+ //t1a = 120;
+ //t2a = 120;
+ //t3a = 120;
 if (t1a > t2a && t1a > t3a) { 
     console.log('Team 1 is a winner with '+ t1a + ' average score');
 } else if (t2a > t1a && t2a > t3a) { 
