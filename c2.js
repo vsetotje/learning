@@ -1,3 +1,6 @@
+// Javascript code challenge 2
+// not sure if it is the best wat to make them all at once,
+//but it looks logical, that you already know at start what will you need.
 var t1g1,t1g2,t1g3,t2g1,t2g2,t2g3,t3g1,t3g2,t3g3,t1a,t2a,t3a,bestteam;
 t1g1 = 89;
 t1g2 = 120;
