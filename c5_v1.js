@@ -21,3 +21,48 @@ var johnCalc = {
 }
 johnCalc.calcTips();
 console.log(johnCalc);
+
+var markCalc = {
+    paid: [77,375,110,45],
+    tips: [],
+    total: [],
+    calcTips: function()
+    {
+        var pers;
+        for (var i = 0; i < markCalc.paid.length; i++){
+            if (markCalc.paid[i] < 100) {
+                pers = 0.20;
+            } else if (markCalc.paid[i] > 100 && markCalc.paid[i] < 300) {
+                pers = 0.10;
+            } else {
+                pers = 0.25;
+            }
+            markCalc.tips[i] = markCalc.paid[i] * pers;
+            markCalc.total[i] = markCalc.paid[i] + markCalc.paid[i] * pers;
+        }
+    }
+}
+markCalc.calcTips();
+console.log(markCalc);
+
+var markTipTotal = 0;
+
+for (var i = 0; i < markCalc.tips.length; i++)
+    {
+    markTipTotal = markTipTotal + markCalc.tips[i];
+    };
+console.log(markTipTotal/markCalc.tips.length);
+
+var johnTipTotal = 0;
+
+for (var i = 0; i < johnCalc.tips.length; i++)
+    {
+    johnTipTotal = johnTipTotal + johnCalc.tips[i];
+    };
+console.log(johnTipTotal/johnCalc.tips.length);
+
+if (johnTipTotal > markTipTotal){
+    console.log('John tips on average more than Mark');
+} else {
+    console.log('Mark tips on average more than John');
+};
