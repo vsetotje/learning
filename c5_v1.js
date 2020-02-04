@@ -24,6 +24,7 @@ var johnCalc = {
         };
         //Here we calculate an av number
         this.jSumAv = this.jSum / johnCalc.tips.length;
+        //works as it should and looks like it is the optimal solution here.
     }
 }
 
