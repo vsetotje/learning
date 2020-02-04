@@ -7,17 +7,17 @@ var johnCalc = {
     jSumAv: 0,
     calcTips: function()
     {
-        var pers;
+        var perc;
         for (var i = 0; i < johnCalc.paid.length; i++){
             if (johnCalc.paid[i] < 50) {
-                pers = 0.20;
+                perc = 0.20;
             } else if (johnCalc.paid[i] > 50 && johnCalc.paid[i] < 200) {
-                pers = 0.15;
+                perc = 0.15;
             } else {
-                pers = 0.1;
+                perc = 0.1;
             }
-            johnCalc.tips[i] = johnCalc.paid[i] * pers;
-            johnCalc.total[i] = johnCalc.paid[i] + johnCalc.paid[i] * pers;
+            johnCalc.tips[i] = johnCalc.paid[i] * perc;
+            johnCalc.total[i] = johnCalc.paid[i] + johnCalc.paid[i] * perc;
             // just a test to make the av calculation within the main function and not ouside.
             //Here we sum tips
             this.jSum = this.jSum + this.tips[i];
@@ -35,17 +35,17 @@ var markCalc = {
     total: [],
     calcTips: function()
     {
-        var pers;
+        var perc;
         for (var i = 0; i < markCalc.paid.length; i++){
             if (markCalc.paid[i] < 100) {
-                pers = 0.20;
+                perc = 0.20;
             } else if (markCalc.paid[i] > 100 && markCalc.paid[i] < 300) {
-                pers = 0.10;
+                perc = 0.10;
             } else {
-                pers = 0.25;
+                perc = 0.25;
             }
-            markCalc.tips[i] = markCalc.paid[i] * pers;
-            markCalc.total[i] = markCalc.paid[i] + markCalc.paid[i] * pers;
+            markCalc.tips[i] = markCalc.paid[i] * perc;
+            markCalc.total[i] = markCalc.paid[i] + markCalc.paid[i] * perc;
         }
     }
 }
