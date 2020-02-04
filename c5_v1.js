@@ -94,3 +94,5 @@ if (avj > avm){
 } else {
     console.log('Mark tips on average more than John');
 };
+
+// It would be nice to have a single function with 4 parameters array, perc1, perc2, perc3. But 2 different sets of conditions is in place, so i guess doing it withing the marcCalc and johnCalc is the way to go.
