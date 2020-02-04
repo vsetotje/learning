@@ -3,6 +3,8 @@ var johnCalc = {
     paid: [124,48,268,180,42],
     tips: [],
     total: [],
+    jSum: 0,
+    jSumAv: 0,
     calcTips: function()
     {
         var pers;
@@ -16,9 +18,12 @@ var johnCalc = {
             }
             johnCalc.tips[i] = johnCalc.paid[i] * pers;
             johnCalc.total[i] = johnCalc.paid[i] + johnCalc.paid[i] * pers;
+            // just a test to make the av calculation within the main function and not ouside.
+            //Here we sum tips
+            this.jSum = this.jSum + this.tips[i];
         };
-        
-        
+        //Here we calculate an av number
+        this.jSumAv = this.jSum / johnCalc.tips.length;
     }
 }
 
@@ -71,6 +76,7 @@ if (johnTipTotal > markTipTotal){
 };
 // doing last part with function
 
+// whole array as an argument for the function
 function calcAV(tips) {
     var sum = 0;
     for (var i = 0; i < tips.length; i++)
