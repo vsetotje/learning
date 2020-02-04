@@ -16,12 +16,14 @@ var johnCalc = {
             }
             johnCalc.tips[i] = johnCalc.paid[i] * pers;
             johnCalc.total[i] = johnCalc.paid[i] + johnCalc.paid[i] * pers;
-        }
+        };
+        
+        
     }
 }
+
 johnCalc.calcTips();
 console.log(johnCalc);
-
 var markCalc = {
     paid: [77,375,110,45],
     tips: [],
@@ -44,6 +46,7 @@ var markCalc = {
 }
 markCalc.calcTips();
 console.log(markCalc);
+//doing the last part the simpler way
 
 var markTipTotal = 0;
 
@@ -62,6 +65,25 @@ for (var i = 0; i < johnCalc.tips.length; i++)
 console.log(johnTipTotal/johnCalc.tips.length);
 
 if (johnTipTotal > markTipTotal){
+    console.log('John tips on average more than Mark');
+} else {
+    console.log('Mark tips on average more than John');
+};
+// doing last part with function
+
+function calcAV(tips) {
+    var sum = 0;
+    for (var i = 0; i < tips.length; i++)
+    {
+        sum = sum + tips[i];
+    }
+    return sum / tips.length;
+}
+var avj = calcAV(johnCalc.tips);
+console.log(avj);
+var avm = calcAV(markCalc.tips);
+console.log(avm);
+if (avj > avm){
     console.log('John tips on average more than Mark');
 } else {
     console.log('Mark tips on average more than John');
