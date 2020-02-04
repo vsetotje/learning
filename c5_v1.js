@@ -51,7 +51,7 @@ var markCalc = {
 }
 markCalc.calcTips();
 console.log(markCalc);
-//doing the last part the simpler way
+//doing the last part the simpler way. It is pretty straigh forward. 
 
 var markTipTotal = 0;
 
@@ -76,7 +76,7 @@ if (johnTipTotal > markTipTotal){
 };
 // doing last part with function
 
-// whole array as an argument for the function
+// whole array as an argument for the function. That's the main takeaway out of it all i guess.
 function calcAV(tips) {
     var sum = 0;
     for (var i = 0; i < tips.length; i++)
